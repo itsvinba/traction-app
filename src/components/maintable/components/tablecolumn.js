@@ -2,7 +2,6 @@ const column = [
   {
     Header: "Channel",
     accessor: "channel",
-    Cell: this.renderEditable,
   },
   {
     Header: "Strategy",

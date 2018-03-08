@@ -8,7 +8,7 @@
 // Custom Dependencies
   import Navbar from './components/nav-bar';
   import theme from './util/theme';
-  import MainTable from './components/maintable/maintable';
+  import MainTable from './components/maintable/index';
 
 class App extends Component {
   render() {

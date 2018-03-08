@@ -9,13 +9,13 @@ import React, { Component } from 'react';
 // Custom Dependencies
   import theme from '../../util/theme';
   import data from './components/data'
-  import columns from './components/tablecolumn'
+
 
 class MainTable extends Component {
   constructor() {
     super();
     this.state = {
-      data: data,      
+      data: data,   
     };
     this.renderEditable = this.renderEditable.bind(this);
   }
@@ -42,63 +42,54 @@ class MainTable extends Component {
       <Container>
         <ReactTable
           data={data}
-          columns={[
+          columns = {[
             {
               Header: "Channel",
               accessor: "channel",
+              minwidth: 150,
             },
             {
-              Header: "Last Name",
-              accessor: "lastName",
+              Header: "Strategy",
+              accessor: "strategy",
+              minWidth: 150,
+              Cell: this.renderEditable,
+            },
+            {
+              Header: "Status",
+              accessor: "status",
               Cell: this.renderEditable
             },
             {
-              Header: "Last Name",
-              accessor: "lastName",
+              Header: "Lead Quality",
+              accessor: "leadquality",
               Cell: this.renderEditable
             },
             {
-              Header: "Last Name",
-              accessor: "lastName",
+              Header: "Impact",
+              accessor: "impact",
               Cell: this.renderEditable
             },
             {
-              Header: "Last Name",
-              accessor: "lastName",
+              Header: "Cost",
+              accessor: "cost",
               Cell: this.renderEditable
             },
             {
-              Header: "Last Name",
-              accessor: "lastName",
+              Header: "Effort",
+              accessor: "effort",
               Cell: this.renderEditable
             },
             {
-              Header: "Last Name",
-              accessor: "lastName",
+              Header: "Timeframe",
+              accessor: "timeframe",
               Cell: this.renderEditable
             },
             {
-              Header: "Last Name",
-              accessor: "lastName",
-              Cell: this.renderEditable
-            },
-            {
-              Header: "Last Name",
-              accessor: "lastName",
-              Cell: this.renderEditable
-            },
-            {
-              Header: "Last Name",
-              accessor: "lastName",
-              Cell: this.renderEditable
-            },
-            {
-              Header: "Last Name",
-              accessor: "lastName",
-              Cell: this.renderEditable
+              Header: "Score",
+              accessor: "score",
             },
           ]}
-          defaultPageSize={10}
+          defaultPageSize={19}
           className="-striped -highlight"
         />
         <br />
