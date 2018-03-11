@@ -3,7 +3,6 @@
 
 // Vendor dependencies
   import styled from 'styled-components';
-  import ReactTable from 'react-table';
 
 // Custom Dependencies
   import Navbar from './components/nav-bar';
