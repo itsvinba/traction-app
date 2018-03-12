@@ -13,7 +13,7 @@ class MainTable extends Component {
   render() {
     return (
       <Container>
-        Main table
+        
       </Container>
     );
   }
