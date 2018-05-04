@@ -29,9 +29,10 @@ class MainInputs extends Component {
   }
 
   handleChange(event) {
-    this.setState({[event.target.name]: event.target.value});   
+    this.setState({[event.target.name]: event.target.value}, () => {
+      this.props.computeScore(this.state);
+    });   
     console.log(this.state); 
-    this.props.computeScore(this.state);
   }
 
   handleSubmit() {
@@ -39,9 +40,9 @@ class MainInputs extends Component {
   }
 
   render() {
-    return (
+    return ( 
       <Container>        
-          <label>{this.state.name}</label>
+          <label>{this.state.displayname}</label>
           <input type="text" name="strategy" value={this.state.strategy} onChange={this.handleChange} />
           {/* Status */}
           <select name="status" value={this.state.status} onChange={this.handleChange}>
